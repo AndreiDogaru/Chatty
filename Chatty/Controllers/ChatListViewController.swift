@@ -42,6 +42,10 @@ class ChatListViewController: UITableViewController {
         self.performSegue(withIdentifier: Constants.CHAT_LIST_TO_CHAT_IDENTIFIER, sender: self)
     }
     
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 64
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == Constants.CHAT_LIST_TO_CHAT_IDENTIFIER {
             if let title = chatPageTitle {
