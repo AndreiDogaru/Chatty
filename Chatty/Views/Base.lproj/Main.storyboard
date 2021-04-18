@@ -124,20 +124,42 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SQS-Lp-kRn" userLabel="MessageView">
                                 <rect key="frame" x="0.0" y="798" width="414" height="64"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write you message..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EAQ-46-zbg">
-                                        <rect key="frame" x="16" y="16" width="382" height="40"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zaE-E6-gAQ">
+                                        <rect key="frame" x="16" y="15" width="340" height="33"/>
                                         <color key="backgroundColor" name="lightGray"/>
+                                        <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
+                                    </textView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Write you message..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LFq-Pv-uY9">
+                                        <rect key="frame" x="20" y="24" width="135" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" systemColor="systemGrayColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vNh-8b-4ct">
+                                        <rect key="frame" x="364" y="16" width="34" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="34" id="5N9-ZR-F4D"/>
+                                            <constraint firstAttribute="height" constant="32" id="eVO-LZ-zFK"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <state key="normal" title="Send"/>
+                                        <connections>
+                                            <action selector="sendPressed:" destination="bM0-MR-eb7" eventType="touchUpInside" id="PhT-BP-olp"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="0my-3u-Npv"/>
-                                    <constraint firstItem="EAQ-46-zbg" firstAttribute="leading" secondItem="SQS-Lp-kRn" secondAttribute="leading" constant="16" id="E3I-YI-9EQ"/>
-                                    <constraint firstItem="EAQ-46-zbg" firstAttribute="top" secondItem="SQS-Lp-kRn" secondAttribute="top" constant="16" id="Mmq-1P-58s"/>
-                                    <constraint firstAttribute="trailing" secondItem="EAQ-46-zbg" secondAttribute="trailing" constant="16" id="TWJ-ry-bMg"/>
-                                    <constraint firstAttribute="bottom" secondItem="EAQ-46-zbg" secondAttribute="bottom" constant="8" id="y51-8a-89z"/>
+                                    <constraint firstAttribute="trailing" secondItem="vNh-8b-4ct" secondAttribute="trailing" constant="16" id="8AC-n3-MLo"/>
+                                    <constraint firstItem="zaE-E6-gAQ" firstAttribute="leading" secondItem="SQS-Lp-kRn" secondAttribute="leading" constant="16" id="8Vm-Cw-hHN"/>
+                                    <constraint firstItem="vNh-8b-4ct" firstAttribute="leading" secondItem="zaE-E6-gAQ" secondAttribute="trailing" constant="8" id="Dku-8r-ATp"/>
+                                    <constraint firstAttribute="bottom" secondItem="zaE-E6-gAQ" secondAttribute="bottom" constant="16" id="FJS-xM-FKW"/>
+                                    <constraint firstItem="vNh-8b-4ct" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="LFq-Pv-uY9" secondAttribute="trailing" constant="8" symbolic="YES" id="Qd6-ie-Cqz"/>
+                                    <constraint firstItem="zaE-E6-gAQ" firstAttribute="bottom" secondItem="vNh-8b-4ct" secondAttribute="bottom" id="RX9-zh-KeS"/>
+                                    <constraint firstItem="LFq-Pv-uY9" firstAttribute="top" secondItem="SQS-Lp-kRn" secondAttribute="top" constant="24" id="rbN-a5-0rV"/>
+                                    <constraint firstItem="LFq-Pv-uY9" firstAttribute="leading" secondItem="SQS-Lp-kRn" secondAttribute="leading" constant="20" id="wbR-l0-ydX"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -155,7 +177,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="COh-Xa-1ud"/>
                     <connections>
-                        <outlet property="messageTextField" destination="EAQ-46-zbg" id="Q9F-Rp-sxS"/>
+                        <outlet property="bottomView" destination="SQS-Lp-kRn" id="Tep-UW-2H5"/>
+                        <outlet property="bottomViewHeight" destination="0my-3u-Npv" id="LJA-TP-J2d"/>
+                        <outlet property="messagePlaceholder" destination="LFq-Pv-uY9" id="FeG-Es-veM"/>
+                        <outlet property="messageTextView" destination="zaE-E6-gAQ" id="5vn-l1-Mnl"/>
+                        <outlet property="sendButton" destination="vNh-8b-4ct" id="LTi-nn-IxS"/>
                         <outlet property="tableView" destination="3rc-Ki-g7g" id="PDZ-z6-YGh"/>
                     </connections>
                 </viewController>
@@ -269,8 +295,14 @@
         <namedColor name="lightGray">
             <color red="0.96100002527236938" green="0.9649999737739563" blue="0.98000001907348633" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
