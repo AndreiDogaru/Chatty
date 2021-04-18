@@ -7,11 +7,6 @@
 
 import UIKit
 
-enum Alignment {
-    case right
-    case left
-}
-
 class MessageCell: UITableViewCell {
 
     @IBOutlet var messageLabels: [UILabel]!

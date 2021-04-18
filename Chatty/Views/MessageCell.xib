@@ -27,7 +27,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" name="lightGray"/>
+                        <color key="backgroundColor" name="brandGray1"/>
                         <constraints>
                             <constraint firstItem="55D-6P-XE4" firstAttribute="leading" secondItem="n6w-A3-1c9" secondAttribute="leading" constant="8" id="8y8-Ct-fCU"/>
                             <constraint firstAttribute="bottom" secondItem="55D-6P-XE4" secondAttribute="bottom" constant="8" id="OIz-8n-jf6"/>
@@ -89,7 +89,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <namedColor name="lightGray">
+        <namedColor name="brandGray1">
             <color red="0.96100002527236938" green="0.9649999737739563" blue="0.98000001907348633" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="primaryBlue">

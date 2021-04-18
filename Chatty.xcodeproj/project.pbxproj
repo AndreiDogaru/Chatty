@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -24,6 +24,8 @@
 		2A70FD0D262969110077E451 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A70FD0C262969110077E451 /* Assets.xcassets */; };
 		2A70FD10262969110077E451 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A70FD0E262969110077E451 /* LaunchScreen.storyboard */; };
 		2A70FD2226297F440077E451 /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A70FD2126297F440077E451 /* ChatListViewController.swift */; };
+		2AAA76FB262C2EFF00880FFB /* SettingsRowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAA76F9262C2EFF00880FFB /* SettingsRowCell.swift */; };
+		2AAA76FC262C2EFF00880FFB /* SettingsRowCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AAA76FA262C2EFF00880FFB /* SettingsRowCell.xib */; };
 		C02B7EECB67C67427156EA67 /* Pods_Chatty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B4ABE8AEC5B9F1CBB904157 /* Pods_Chatty.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +49,8 @@
 		2A70FD0F262969110077E451 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A70FD11262969110077E451 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A70FD2126297F440077E451 /* ChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
+		2AAA76F9262C2EFF00880FFB /* SettingsRowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRowCell.swift; sourceTree = "<group>"; };
+		2AAA76FA262C2EFF00880FFB /* SettingsRowCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsRowCell.xib; sourceTree = "<group>"; };
 		3B4ABE8AEC5B9F1CBB904157 /* Pods_Chatty.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chatty.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E17AEF2A6E15046B85EE7370 /* Pods-Chatty.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chatty.debug.xcconfig"; path = "Target Support Files/Pods-Chatty/Pods-Chatty.debug.xcconfig"; sourceTree = "<group>"; };
 		F15D11A75A8CB24B9B17262A /* Pods-Chatty.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chatty.release.xcconfig"; path = "Target Support Files/Pods-Chatty/Pods-Chatty.release.xcconfig"; sourceTree = "<group>"; };
@@ -135,6 +139,8 @@
 				2A0C3D8926299E89002E2390 /* ChatListCell.xib */,
 				2A0C3D9F2629CF8F002E2390 /* MessageCell.swift */,
 				2A0C3DA02629CF8F002E2390 /* MessageCell.xib */,
+				2AAA76F9262C2EFF00880FFB /* SettingsRowCell.swift */,
+				2AAA76FA262C2EFF00880FFB /* SettingsRowCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -145,7 +151,6 @@
 				E17AEF2A6E15046B85EE7370 /* Pods-Chatty.debug.xcconfig */,
 				F15D11A75A8CB24B9B17262A /* Pods-Chatty.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -219,6 +224,7 @@
 				2A0C3DA22629CF8F002E2390 /* MessageCell.xib in Resources */,
 				2A70FD10262969110077E451 /* LaunchScreen.storyboard in Resources */,
 				2A0C3D8B26299E89002E2390 /* ChatListCell.xib in Resources */,
+				2AAA76FC262C2EFF00880FFB /* SettingsRowCell.xib in Resources */,
 				2A70FD0D262969110077E451 /* Assets.xcassets in Resources */,
 				2A70FD0B262969100077E451 /* Main.storyboard in Resources */,
 			);
@@ -285,6 +291,7 @@
 				2A0C3DA62629E353002E2390 /* ChatViewController.swift in Sources */,
 				2A70FD06262969100077E451 /* SceneDelegate.swift in Sources */,
 				2A2C489E26298C4000FC6E5C /* SettingsViewController.swift in Sources */,
+				2AAA76FB262C2EFF00880FFB /* SettingsRowCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
